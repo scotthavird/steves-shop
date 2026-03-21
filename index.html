@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve's Woodcraft — Handcrafted Cutting Boards & Charcuterie Boards</title>
+    <meta name="description" content="One-of-a-kind handcrafted cutting boards and charcuterie boards made from carefully sourced exotic hardwoods. Each piece tells a story — from the hunt for the perfect slab to the finished, branded board.">
+    <meta property="og:title" content="Steve's Woodcraft — Handcrafted Boards">
+    <meta property="og:description" content="One-of-a-kind cutting boards and charcuterie boards from carefully sourced exotic hardwoods.">
+    <meta property="og:image" content="photos/IMG_2423.jpeg">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%233B2314'/><text y='72' x='50' text-anchor='middle' font-size='60' font-family='serif' fill='%23C8913A'>S</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Steve's Woodcraft",
+        "description": "Handcrafted cutting boards and charcuterie boards from carefully sourced exotic hardwoods",
+        "priceRange": "$140-$165",
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Live-Edge Charcuterie Board",
+                    "description": "Single-slab charcuterie board with natural live edge, hand-selected hardwood",
+                    "material": "Walnut, Burl Wood",
+                    "category": "Cutting Boards"
+                },
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": "140", "maxPrice": "155" }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Multi-Wood Cutting Board",
+                    "description": "Exotic hardwood cutting board combining multiple species in striking stripe patterns",
+                    "material": "Walnut, Maple, Cherry, Purpleheart, Yellowheart, Mahogany, Wenge, Padauk, Lacewood",
+                    "category": "Cutting Boards"
+                },
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": "140", "maxPrice": "155" }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Carving Board with Juice Groove",
+                    "description": "Live-edge carving board with routed juice groove, some with hand-forged iron handles",
+                    "material": "Walnut, Spalted Wood",
+                    "category": "Cutting Boards"
+                },
+                "priceCurrency": "USD",
+                "priceSpecification": { "@type": "PriceSpecification", "minPrice": "150", "maxPrice": "165" }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           DESIGN TOKENS
+           ============================================ */
+        :root {
+            --walnut: #3B2314;
+            --walnut-light: #5C3A24;
+            --honey: #C8913A;
+            --honey-light: #D4A85C;
+            --honey-glow: #E8C47A;
+            --cream: #F5F0E8;
+            --cream-dark: #E8E0D0;
+            --parchment: #FAF7F2;
+            --charcoal: #1A1410;
+            --charcoal-soft: #2A2218;
+            --purple-accent: #6B3A5C;
+            --sage: #8A9A7B;
+            --rust: #A0522D;
+
+            --font-display: 'Cormorant Garamond', 'Georgia', serif;
+            --font-body: 'Outfit', 'Segoe UI', sans-serif;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            --space-2xl: 10rem;
+
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+
+            --shadow-soft: 0 4px 20px rgba(59, 35, 20, 0.08);
+            --shadow-medium: 0 8px 40px rgba(59, 35, 20, 0.12);
+            --shadow-dramatic: 0 20px 60px rgba(59, 35, 20, 0.2);
+
+            --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            color: var(--charcoal);
+            background: var(--parchment);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        .t-display {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .t-display-lg {
+            font-family: var(--font-display);
+            font-weight: 400;
+            font-size: clamp(3rem, 8vw, 7rem);
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+        }
+
+        .t-display-md {
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .t-display-sm {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            line-height: 1.2;
+        }
+
+        .t-label {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .t-body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .t-body-sm {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           LAYOUT
+           ============================================ */
+        .container {
+            width: min(90%, 1280px);
+            margin: 0 auto;
+        }
+
+        .container-narrow {
+            width: min(85%, 900px);
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: var(--space-xl) 0;
+        }
+
+        /* ============================================
+           GRAIN TEXTURE OVERLAY
+           ============================================ */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: background var(--transition-smooth), box-shadow var(--transition-smooth), padding var(--transition-smooth);
+        }
+
+        .nav.scrolled {
+            background: rgba(250, 247, 242, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(59, 35, 20, 0.08);
+            padding: 0.6rem 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--cream);
+            transition: color var(--transition-smooth);
+        }
+
+        .nav.scrolled .nav-logo {
+            color: var(--walnut);
+        }
+
+        .nav-logo span {
+            color: var(--honey);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav.scrolled .nav-links a {
+            color: var(--walnut-light);
+        }
+
+        .nav-links a:hover {
+            color: var(--honey);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--honey);
+            transition: width var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile menu */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 32px;
+            height: 24px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--cream);
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled .nav-toggle span {
+            background: var(--walnut);
+        }
+
+        .nav-toggle span:nth-child(1) { top: 0; }
+        .nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .nav-toggle span:nth-child(3) { bottom: 0; }
+
+        .nav-toggle.active span:nth-child(1) {
+            top: 50%; transform: translateY(-50%) rotate(45deg);
+            background: var(--walnut);
+        }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) {
+            bottom: 50%; transform: translateY(50%) rotate(-45deg);
+            background: var(--walnut);
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+
+            .nav-links {
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: var(--parchment);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: var(--space-md);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            .nav-links.open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links a {
+                color: var(--walnut) !important;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ============================================
+           HERO
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: var(--space-xl);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                linear-gradient(180deg,
+                    rgba(26, 20, 16, 0.3) 0%,
+                    rgba(26, 20, 16, 0.1) 40%,
+                    rgba(26, 20, 16, 0.5) 70%,
+                    rgba(26, 20, 16, 0.85) 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--cream);
+        }
+
+        .hero-eyebrow {
+            color: var(--honey);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--honey);
+        }
+
+        .hero h1 {
+            margin-bottom: var(--space-md);
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--honey-glow);
+        }
+
+        .hero-subtitle {
+            max-width: 520px;
+            color: rgba(245, 240, 232, 0.8);
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2.2rem;
+            background: var(--honey);
+            color: var(--charcoal);
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .hero-cta:hover {
+            background: var(--honey-glow);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(200, 145, 58, 0.3);
+        }
+
+        .hero-cta svg {
+            transition: transform var(--transition-smooth);
+        }
+
+        .hero-cta:hover svg {
+            transform: translateX(4px);
+        }
+
+        .hero-scroll-hint {
+            position: absolute;
+            bottom: var(--space-md);
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(245, 240, 232, 0.4);
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .hero-scroll-hint::after {
+            content: '';
+            width: 1px;
+            height: 30px;
+            background: linear-gradient(to bottom, rgba(245, 240, 232, 0.4), transparent);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
+        }
+
+        /* ============================================
+           ABOUT / STORY
+           ============================================ */
+        .story {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--honey), transparent);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        .story-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: var(--space-sm);
+            position: relative;
+        }
+
+        .story-img {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .story-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .story-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .story-img-portrait {
+            grid-row: 1 / 3;
+            min-height: 500px;
+        }
+
+        .story-img-landscape {
+            min-height: 240px;
+        }
+
+        .story-text {
+            padding: var(--space-md) 0;
+        }
+
+        .story-text .t-label {
+            color: var(--honey);
+            margin-bottom: var(--space-sm);
+        }
+
+        .story-text .t-display-md {
+            color: var(--walnut);
+            margin-bottom: var(--space-md);
+        }
+
+        .story-text p {
+            color: var(--walnut-light);
+            margin-bottom: var(--space-sm);
+        }
+
+        .story-text p strong {
+            color: var(--walnut);
+            font-weight: 500;
+        }
+
+        .wood-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: var(--space-md);
+        }
+
+        .wood-tag {
+            padding: 0.4rem 0.9rem;
+            background: var(--parchment);
+            border: 1px solid var(--cream-dark);
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: var(--walnut-light);
+            transition: all var(--transition-smooth);
+        }
+
+        .wood-tag:hover {
+            border-color: var(--honey);
+            color: var(--walnut);
+        }
+
+        @media (max-width: 900px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            .story-images {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                max-height: 400px;
+            }
+            .story-img-portrait {
+                min-height: 300px;
+            }
+            .story-img-landscape {
+                min-height: 190px;
+            }
+        }
+
+        /* ============================================
+           PRODUCT SECTIONS
+           ============================================ */
+        .products {
+            background: var(--parchment);
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .category-header .t-label {
+            color: var(--honey);
+            margin-bottom: var(--space-xs);
+        }
+
+        .category-header .t-display-md {
+            color: var(--walnut);
+            margin-bottom: var(--space-sm);
+        }
+
+        .category-header p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--walnut-light);
+        }
+
+        .category-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--honey);
+            margin: var(--space-xl) auto;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .product-grid-3 {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+
+        .product-card {
+            background: white;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+
+        .product-card-img {
+            position: relative;
+            padding-top: 80%;
+            overflow: hidden;
+        }
+
+        .product-card-img img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .product-card:hover .product-card-img img {
+            transform: scale(1.08);
+        }
+
+        .product-card-img .alt-img {
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .product-card:hover .product-card-img .alt-img {
+            opacity: 1;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+            padding: 0.3rem 0.7rem;
+            background: var(--walnut);
+            color: var(--honey-glow);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .product-card-body {
+            padding: 1.3rem 1.5rem 1.5rem;
+        }
+
+        .product-card-body h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--walnut);
+            margin-bottom: 0.3rem;
+            line-height: 1.3;
+        }
+
+        .product-wood-list {
+            font-size: 0.78rem;
+            color: var(--honey);
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.6rem;
+        }
+
+        .product-desc {
+            font-size: 0.88rem;
+            color: var(--walnut-light);
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+
+        .product-price {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--walnut);
+        }
+
+        @media (max-width: 700px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================
+           ALTERNATING DARK SECTION
+           ============================================ */
+        .section-dark {
+            background: var(--charcoal);
+            color: var(--cream);
+            position: relative;
+        }
+
+        .section-dark .category-header .t-label {
+            color: var(--honey);
+        }
+
+        .section-dark .category-header .t-display-md {
+            color: var(--cream);
+        }
+
+        .section-dark .category-header p {
+            color: rgba(245, 240, 232, 0.6);
+        }
+
+        .section-dark .product-card {
+            background: var(--charcoal-soft);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-dark .product-card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-dark .product-card-body h3 {
+            color: var(--cream);
+        }
+
+        .section-dark .product-desc {
+            color: rgba(245, 240, 232, 0.6);
+        }
+
+        .section-dark .product-price {
+            color: var(--honey-glow);
+        }
+
+        .section-dark .category-divider {
+            background: rgba(200, 145, 58, 0.3);
+        }
+
+        /* ============================================
+           WOOD TYPES
+           ============================================ */
+        .wood-section {
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wood-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--cream-dark), transparent);
+        }
+
+        .wood-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .wood-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--parchment);
+            transition: all var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wood-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .wood-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-sm);
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .wood-card h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--walnut);
+            margin-bottom: 0.4rem;
+        }
+
+        .wood-card p {
+            font-size: 0.82rem;
+            color: var(--walnut-light);
+            line-height: 1.6;
+        }
+
+        .wood-philosophy {
+            margin-top: var(--space-lg);
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wood-philosophy blockquote {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--walnut);
+            line-height: 1.5;
+            position: relative;
+            padding: 0 var(--space-md);
+        }
+
+        .wood-philosophy blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3em;
+            left: -0.1em;
+            font-size: 4rem;
+            color: var(--honey);
+            opacity: 0.4;
+            font-style: normal;
+        }
+
+        /* ============================================
+           PROCESS / HOW IT'S MADE
+           ============================================ */
+        .process {
+            background: var(--charcoal);
+            color: var(--cream);
+            position: relative;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--honey), var(--honey), transparent);
+            opacity: 0.3;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--space-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--charcoal-soft);
+            border: 1px solid rgba(200, 145, 58, 0.2);
+            border-radius: 50%;
+            color: var(--honey);
+        }
+
+        .process-icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .process-step h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--honey-glow);
+            margin-bottom: 0.4rem;
+        }
+
+        .process-step p {
+            font-size: 0.85rem;
+            color: rgba(245, 240, 232, 0.5);
+            line-height: 1.6;
+        }
+
+        .process-number {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            color: var(--honey);
+            opacity: 0.5;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-md);
+            }
+            .process-steps::before { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================
+           CUSTOM ORDERS / CTA
+           ============================================ */
+        .custom-orders {
+            background: var(--parchment);
+            text-align: center;
+            position: relative;
+        }
+
+        .custom-orders::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--honey), transparent);
+        }
+
+        .custom-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .custom-inner .t-label {
+            color: var(--honey);
+            margin-bottom: var(--space-sm);
+        }
+
+        .custom-inner .t-display-md {
+            color: var(--walnut);
+            margin-bottom: var(--space-sm);
+        }
+
+        .custom-inner p {
+            color: var(--walnut-light);
+            margin-bottom: var(--space-md);
+        }
+
+        .price-display {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin: var(--space-md) 0;
+            flex-wrap: wrap;
+        }
+
+        .price-item {
+            padding: 1.5rem 2rem;
+            background: white;
+            box-shadow: var(--shadow-soft);
+            min-width: 200px;
+        }
+
+        .price-item .price-range {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--walnut);
+            margin-bottom: 0.2rem;
+        }
+
+        .price-item .price-label {
+            font-size: 0.78rem;
+            color: var(--walnut-light);
+            letter-spacing: 0.05em;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2.5rem;
+            background: var(--walnut);
+            color: var(--honey-glow);
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            margin-top: var(--space-sm);
+        }
+
+        .cta-button:hover {
+            background: var(--walnut-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--charcoal);
+            color: rgba(245, 240, 232, 0.4);
+            padding: var(--space-lg) 0 var(--space-md);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .footer-brand .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand .footer-logo span {
+            color: var(--honey);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .footer-links h4 {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--honey);
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-links a {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(245, 240, 232, 0.5);
+            margin-bottom: 0.4rem;
+            transition: color var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--honey);
+        }
+
+        .footer-bottom {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-sm);
+            border-top: 1px solid rgba(245, 240, 232, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(245, 240, 232, 0.1);
+            border-radius: 50%;
+            color: rgba(245, 240, 232, 0.4);
+            transition: all var(--transition-smooth);
+        }
+
+        .footer-social a:hover {
+            border-color: var(--honey);
+            color: var(--honey);
+        }
+
+        /* ============================================
+           SCROLL ANIMATIONS
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+        .reveal-delay-6 { transition-delay: 0.6s; }
+
+        /* ============================================
+           LIGHTBOX
+           ============================================ */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(26, 20, 16, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .lightbox.active img {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 44px;
+            height: 44px;
+            background: none;
+            border: 1px solid rgba(245, 240, 232, 0.2);
+            border-radius: 50%;
+            color: var(--cream);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-smooth);
+        }
+
+        .lightbox-close:hover {
+            border-color: var(--honey);
+            color: var(--honey);
+        }
+
+        /* ============================================
+           UTILITY
+           ============================================ */
+        .visually-hidden {
+            position: absolute;
+            width: 1px; height: 1px;
+            padding: 0; margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+         ========================================== -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">Steve's <span>Woodcraft</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#the-wood">The Wood</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#custom">Custom Orders</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="photos/IMG_2423.jpeg" alt="Handcrafted live-edge walnut charcuterie board on granite countertop" width="1200" height="800">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-eyebrow t-label">Handcrafted in Small Batches</div>
+            <h1 class="t-display-lg">
+                Every Grain<br>
+                Tells a <em>Story</em>
+            </h1>
+            <p class="hero-subtitle t-body">
+                One-of-a-kind cutting boards and charcuterie boards, crafted from hand-selected exotic hardwoods. No two pieces are ever the same.
+            </p>
+            <a href="#collection" class="hero-cta">
+                Browse the Collection
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+        <div class="hero-scroll-hint">Scroll</div>
+    </section>
+
+    <!-- ==========================================
+         STORY / ABOUT
+         ========================================== -->
+    <section class="story section-padding" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-images">
+                    <div class="story-img story-img-portrait reveal">
+                        <img src="photos/IMG_4457.jpeg" alt="Steve — master woodworker and founder of Steve's Woodcraft" loading="lazy" width="600" height="800">
+                    </div>
+                    <div class="story-img story-img-landscape reveal reveal-delay-1">
+                        <img src="photos/IMG_3777.jpeg" alt="Steve holding a hand-selected burl wood charcuterie board" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="story-img story-img-landscape reveal reveal-delay-2">
+                        <img src="photos/IMG_3778.jpeg" alt="Steve holding a live-edge serving board" loading="lazy" width="600" height="400">
+                    </div>
+                </div>
+                <div class="story-text">
+                    <div class="t-label reveal">The Craftsman</div>
+                    <h2 class="t-display-md reveal reveal-delay-1">It Starts With<br>the Hunt</h2>
+                    <p class="t-body reveal reveal-delay-2">
+                        For Steve, every board begins long before the workshop. It starts with <strong>the hunt</strong> — scouring local sawmills, visiting lumber yards, and chasing down leads on fallen trees with character. He's looking for that perfect slab: the walnut with cathedral grain, the spalted maple with lightning-bolt veining, the burl with figure you can't stop running your hand across.
+                    </p>
+                    <p class="t-body reveal reveal-delay-3">
+                        Finding the right wood is half the joy. The other half is transforming it — shaping, sanding, and finishing each piece until it becomes something beautiful enough to display, yet rugged enough to use every single day. Every board is sealed with a food-safe finish and <strong>branded with Steve's signature logo</strong> — his mark of craftsmanship.
+                    </p>
+                    <div class="wood-tags reveal reveal-delay-4">
+                        <span class="wood-tag">Walnut</span>
+                        <span class="wood-tag">Maple</span>
+                        <span class="wood-tag">Cherry</span>
+                        <span class="wood-tag">Purpleheart</span>
+                        <span class="wood-tag">Yellowheart</span>
+                        <span class="wood-tag">Mahogany</span>
+                        <span class="wood-tag">Wenge</span>
+                        <span class="wood-tag">Padauk</span>
+                        <span class="wood-tag">Lacewood</span>
+                        <span class="wood-tag">Spalted Maple</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PRODUCT COLLECTION
+         ========================================== -->
+    <section class="products section-padding" id="collection">
+        <div class="container">
+            <div class="category-header reveal">
+                <div class="t-label">The Collection</div>
+                <h2 class="t-display-md">Boards Worth Gathering Around</h2>
+                <p class="t-body">Each piece is handcrafted from carefully sourced hardwoods. Browse by style to find the board that speaks to you.</p>
+            </div>
+
+            <!-- CATEGORY A: Live-Edge Charcuterie -->
+            <div class="category-header reveal" style="margin-top: var(--space-lg);">
+                <div class="t-label">Category</div>
+                <h3 class="t-display-sm">Live-Edge Charcuterie Boards</h3>
+                <p class="t-body-sm">Cut from a single slab of hand-selected hardwood, preserving the natural live edge. No two are alike — the wood tells its own story.</p>
+            </div>
+
+            <div class="product-grid reveal">
+                <div class="product-card" data-img="photos/IMG_2423.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_2423.jpeg" alt="The Cathedral — live-edge walnut charcuterie board with natural void" loading="lazy" width="600" height="480">
+                        <span class="product-badge">One of a Kind</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Cathedral</h3>
+                        <div class="product-wood-list">Black Walnut</div>
+                        <p class="product-desc">A sweeping walnut slab with dramatic cathedral grain and a natural void that catches the light. Statement-piece energy for your next gathering.</p>
+                        <div class="product-price">$155</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_3860.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_3860.jpeg" alt="The Hearthstone — walnut serving board on display stand" loading="lazy" width="600" height="480">
+                        <img src="photos/IMG_3861.jpeg" alt="The Hearthstone gift wrapped with ribbon" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Hearthstone</h3>
+                        <div class="product-wood-list">Black Walnut</div>
+                        <p class="product-desc">Elegant live-edge walnut with gentle curves and a warm, inviting grain. Comes displayed on a handmade wooden stand — gift-ready.</p>
+                        <div class="product-price">$150</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_3777.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_3777.jpeg" alt="The Wildwood — burl wood charcuterie board with swirling grain" loading="lazy" width="600" height="480">
+                        <img src="photos/IMG_3778.jpeg" alt="The Driftwood — light wood live-edge board" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Wildwood</h3>
+                        <div class="product-wood-list">Burl Wood</div>
+                        <p class="product-desc">Wild, swirling burl figure that's impossible to look away from. Compact enough for intimate charcuterie, dramatic enough to steal the show.</p>
+                        <div class="product-price">$145</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-divider"></div>
+
+            <!-- CATEGORY B: Multi-Wood Cutting Boards -->
+            <div class="category-header reveal">
+                <div class="t-label">Category</div>
+                <h3 class="t-display-sm">Multi-Wood Cutting Boards</h3>
+                <p class="t-body-sm">A symphony of exotic hardwoods — each board combines multiple species for striking visual contrast. Walnut, maple, cherry, purpleheart, yellowheart, mahogany, and more.</p>
+            </div>
+
+            <div class="product-grid product-grid-3 reveal">
+                <div class="product-card" data-img="photos/IMG_3785.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_3785.jpeg" alt="The Autumn Stripe — cherry, walnut, purpleheart, yellowheart cutting board" loading="lazy" width="600" height="480">
+                        <img src="photos/IMG_3786.jpeg" alt="The Autumn Stripe alternate view" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Autumn Stripe</h3>
+                        <div class="product-wood-list">Cherry · Walnut · Purpleheart · Yellowheart</div>
+                        <p class="product-desc">Warm autumn tones in perfect harmony — cherry bookends frame bold stripes of purpleheart and golden yellowheart.</p>
+                        <div class="product-price">$150</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4618.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4618.jpeg" alt="The Lacewood Reserve — lacewood, padauk, walnut cutting board with maple accents" loading="lazy" width="600" height="480">
+                        <span class="product-badge">Collector's Pick</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Lacewood Reserve</h3>
+                        <div class="product-wood-list">Lacewood · Padauk · Walnut · Maple</div>
+                        <p class="product-desc">The showstopper. Rare lacewood with its distinctive spotted pattern meets deep red padauk, separated by delicate maple accent lines.</p>
+                        <div class="product-price">$155</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4615.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4615.jpeg" alt="The Contrast — maple, walnut, wenge, purpleheart cutting board" loading="lazy" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Contrast</h3>
+                        <div class="product-wood-list">Maple · Walnut · Wenge · Purpleheart · Mahogany</div>
+                        <p class="product-desc">Maximum drama — creamy maple against near-black wenge, with purpleheart accents creating a board that's equal parts art and function.</p>
+                        <div class="product-price">$150</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4614.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4614.jpeg" alt="The Bold Four — mahogany, purpleheart, walnut, maple cutting board" loading="lazy" width="600" height="480">
+                        <img src="photos/IMG_4616.jpeg" alt="The Bold Four alternate view" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Bold Four</h3>
+                        <div class="product-wood-list">Mahogany · Purpleheart · Walnut · Maple</div>
+                        <p class="product-desc">Four wide, confident stripes — each wood species given room to shine. Clean lines, bold colors, unforgettable presence.</p>
+                        <div class="product-price">$145</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4620.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4620.jpeg" alt="The Strata — maple, walnut, wenge, purpleheart bold stripe board" loading="lazy" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Strata</h3>
+                        <div class="product-wood-list">Maple · Walnut · Wenge · Purpleheart</div>
+                        <p class="product-desc">Broad, earthy bands of walnut and wenge layered between creamy maple and a pop of purpleheart. Geological layers in hardwood form.</p>
+                        <div class="product-price">$150</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4619.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4619.jpeg" alt="The Vineyard — cherry, purpleheart, yellowheart, walnut cutting board" loading="lazy" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Vineyard</h3>
+                        <div class="product-wood-list">Cherry · Purpleheart · Yellowheart · Walnut</div>
+                        <p class="product-desc">Rich cherry and warm yellowheart flanking a deep stripe of purpleheart — like a sunset captured in wood.</p>
+                        <div class="product-price">$145</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4471.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4471.jpeg" alt="The Horizon — walnut, maple, cherry, purpleheart horizontal stripe board" loading="lazy" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Horizon</h3>
+                        <div class="product-wood-list">Walnut · Maple · Cherry · Purpleheart</div>
+                        <p class="product-desc">Horizontal bands of color like a prairie sunset — cherry fading to maple with a single vivid purpleheart accent line.</p>
+                        <div class="product-price">$145</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4617.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4617.jpeg" alt="The Ember — mahogany, purpleheart, walnut, cherry cutting board" loading="lazy" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Ember</h3>
+                        <div class="product-wood-list">Mahogany · Purpleheart · Walnut · Cherry</div>
+                        <p class="product-desc">Deep, warm tones that glow under kitchen light. Mahogany and purpleheart bring the heat while walnut grounds the composition.</p>
+                        <div class="product-price">$145</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-img="photos/IMG_4621.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4621.jpeg" alt="The Minimalist — solid walnut cutting board" loading="lazy" width="600" height="480">
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Minimalist</h3>
+                        <div class="product-wood-list">Black Walnut</div>
+                        <p class="product-desc">Sometimes one wood is all you need. Clean, confident, and beautifully simple — pure walnut with nothing to prove.</p>
+                        <div class="product-price">$140</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-divider"></div>
+        </div>
+
+        <!-- CATEGORY C: Juice Groove Carving Boards (Dark section) -->
+        <div class="section-dark section-padding">
+            <div class="container">
+                <div class="category-header reveal">
+                    <div class="t-label">Premium Collection</div>
+                    <h3 class="t-display-sm">Carving Boards with Juice Groove</h3>
+                    <p class="t-body-sm">Built for the serious cook. A routed juice groove catches drippings while the live edge adds rustic elegance. Some feature hand-forged iron handles.</p>
+                </div>
+
+                <div class="product-grid reveal">
+                    <div class="product-card" data-img="photos/IMG_4485.jpeg">
+                        <div class="product-card-img">
+                            <img src="photos/IMG_4485.jpeg" alt="The Ironside — walnut carving board with forged iron handles and juice groove" loading="lazy" width="600" height="480">
+                            <img src="photos/IMG_4486.jpeg" alt="The Ironside alternate view" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                            <span class="product-badge" style="background: var(--honey); color: var(--charcoal);">Signature Piece</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h3>The Ironside</h3>
+                            <div class="product-wood-list">Black Walnut · Hand-Forged Iron Handles</div>
+                            <p class="product-desc">The flagship. Rich walnut with a perfectly routed juice groove and hand-forged iron handles. Where serious cooking meets heirloom craftsmanship.</p>
+                            <div class="product-price">$165</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-img="photos/IMG_4455.jpeg">
+                        <div class="product-card-img">
+                            <img src="photos/IMG_4455.jpeg" alt="The Tempest — spalted figured wood carving board with juice groove" loading="lazy" width="600" height="480">
+                            <span class="product-badge">Rare Find</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h3>The Tempest</h3>
+                            <div class="product-wood-list">Spalted Figured Wood</div>
+                            <p class="product-desc">Wild, spalted grain with natural knots and color shifts that make this board a genuine conversation piece. Juice groove for function, figure for the soul.</p>
+                            <div class="product-price">$160</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-img="photos/IMG_4451.jpeg">
+                        <div class="product-card-img">
+                            <img src="photos/IMG_4451.jpeg" alt="The Ridgeline — walnut carving board with juice groove on display stand" loading="lazy" width="600" height="480">
+                            <img src="photos/IMG_4452.jpeg" alt="The Ridgeline alternate view" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                        </div>
+                        <div class="product-card-body">
+                            <h3>The Ridgeline</h3>
+                            <div class="product-wood-list">Black Walnut</div>
+                            <p class="product-desc">Classic walnut with a precision-routed juice groove and natural live edge. The workhorse of the collection — beautiful enough to display, built to be used.</p>
+                            <div class="product-price">$155</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CATEGORY D: Spalted & Figured Wood Boards -->
+        <div class="container section-padding">
+            <div class="category-header reveal">
+                <div class="t-label">Limited Edition</div>
+                <h3 class="t-display-sm">Spalted & Figured Wood Boards</h3>
+                <p class="t-body-sm">Nature's artwork. Spalted and figured wood creates patterns no machine could replicate — dark veining, tiger stripes, and organic textures that make each board a conversation piece.</p>
+            </div>
+
+            <div class="product-grid reveal" style="max-width: 700px; margin: 0 auto;">
+                <div class="product-card" data-img="photos/IMG_4124.jpeg">
+                    <div class="product-card-img">
+                        <img src="photos/IMG_4124.jpeg" alt="The Lightning Map — spalted maple board with dramatic natural dark line patterns" loading="lazy" width="600" height="480">
+                        <img src="photos/IMG_4125.jpeg" alt="The Lightning Map alternate view" loading="lazy" class="alt-img" style="position:absolute;inset:0" width="600" height="480">
+                        <span class="product-badge">Nature's Canvas</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3>The Lightning Map</h3>
+                        <div class="product-wood-list">Spalted Maple</div>
+                        <p class="product-desc">Spalted maple with dramatic dark veining that looks like a river system from above. Each line was drawn by fungi over months — nature's slow, patient art. Completely unique, impossible to replicate.</p>
+                        <div class="product-price">$155</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         THE WOOD
+         ========================================== -->
+    <section class="wood-section section-padding" id="the-wood">
+        <div class="container">
+            <div class="category-header reveal">
+                <div class="t-label">Materials</div>
+                <h2 class="t-display-md">The Wood</h2>
+                <p class="t-body">Steve works with over ten species of hardwood — each chosen for its color, grain, and character. Here's what makes each one special.</p>
+            </div>
+
+            <div class="wood-grid">
+                <div class="wood-card reveal">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #3B2314, #5C3A24);"></div>
+                    <h3>Walnut</h3>
+                    <p>Rich, dark chocolate brown with flowing cathedral grain. The backbone of the collection.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-1">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #F0E4D0, #E8D8B8);"></div>
+                    <h3>Maple</h3>
+                    <p>Creamy white with subtle figure. Creates beautiful contrast against darker woods.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-2">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #B5593A, #C7704E);"></div>
+                    <h3>Cherry</h3>
+                    <p>Warm pinkish-red that deepens beautifully with age. A timeless American classic.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-3">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #6B2D6B, #8B4A8B);"></div>
+                    <h3>Purpleheart</h3>
+                    <p>Vibrant, saturated purple from Central and South America. Unmistakable in any combination.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-4">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #D4A520, #E8C040);"></div>
+                    <h3>Yellowheart</h3>
+                    <p>Bright golden yellow that adds warmth and pop. A natural mood-lifter in any board.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-1">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #7B3B1A, #9B5530);"></div>
+                    <h3>Mahogany</h3>
+                    <p>Rich reddish-brown with distinctive ribbon grain. Warm, deep, and endlessly elegant.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-2">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #2A1E14, #3E2E1E);"></div>
+                    <h3>Wenge</h3>
+                    <p>Near-black with dramatic coarse grain texture. Brings bold contrast and visual weight.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-3">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #C0431A, #D65830);"></div>
+                    <h3>Padauk</h3>
+                    <p>Vivid orange-red that ages gracefully to a deep burgundy. Show-stopping color.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-4">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #B89870, #C8A880); background-image: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.3) 1px, transparent 2px), radial-gradient(circle at 60% 60%, rgba(255,255,255,0.3) 1px, transparent 2px), radial-gradient(circle at 45% 30%, rgba(255,255,255,0.3) 1px, transparent 2px);"></div>
+                    <h3>Lacewood</h3>
+                    <p>A unique lace-like spotted pattern unlike any other wood. A rare find that collectors seek out.</p>
+                </div>
+                <div class="wood-card reveal reveal-delay-5">
+                    <div class="wood-swatch" style="background: linear-gradient(135deg, #C8B090, #D8C0A0); background-image: linear-gradient(30deg, rgba(40,30,20,0.4) 1px, transparent 2px), linear-gradient(150deg, rgba(40,30,20,0.3) 1px, transparent 2px);"></div>
+                    <h3>Spalted Maple</h3>
+                    <p>Maple transformed by fungi into a canvas of dark lines and organic patterns. Nature's ink work.</p>
+                </div>
+            </div>
+
+            <div class="wood-philosophy reveal">
+                <blockquote>
+                    The hunt for the right piece of wood is just as rewarding as what I make from it. Every slab has a story — where the tree stood, how it fell, what the grain reveals. My job is to let that story come through.
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         HOW IT'S MADE
+         ========================================== -->
+    <section class="process section-padding" id="process">
+        <div class="container">
+            <div class="category-header reveal">
+                <div class="t-label" style="color: var(--honey);">From Forest to Table</div>
+                <h2 class="t-display-md" style="color: var(--cream);">How It's Made</h2>
+                <p class="t-body-sm" style="color: rgba(245,240,232,0.5);">Every board goes through a deliberate, hands-on process. No shortcuts, no mass production — just patient craftsmanship.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="process-number">01</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </div>
+                    <h3>The Hunt</h3>
+                    <p>Scouring sawmills, lumber yards, and salvage sites for wood with character, figure, and soul.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-1">
+                    <div class="process-number">02</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>The Cut</h3>
+                    <p>Milling raw lumber to precise thickness, reading the grain to maximize beauty in every piece.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-2">
+                    <div class="process-number">03</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 6v12"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3>The Build</h3>
+                    <p>Gluing, clamping, and shaping — sometimes with multiple exotic species arranged for maximum contrast.</p>
+                </div>
+                <div class="process-step reveal reveal-delay-3">
+                    <div class="process-number">04</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>The Finish</h3>
+                    <p>Progressive sanding to silky smooth, food-safe oil finish, and Steve's signature brand burned into every board.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CUSTOM ORDERS / PRICING
+         ========================================== -->
+    <section class="custom-orders section-padding" id="custom">
+        <div class="container">
+            <div class="custom-inner">
+                <div class="t-label reveal">Custom Orders Welcome</div>
+                <h2 class="t-display-md reveal reveal-delay-1">Your Board, Your Way</h2>
+                <p class="t-body reveal reveal-delay-2">
+                    Every board is unique, but if you have something specific in mind — a favorite wood species, a certain size, or handles for your carving board — Steve would love to build it for you.
+                </p>
+
+                <div class="price-display reveal reveal-delay-3">
+                    <div class="price-item">
+                        <div class="price-range">$140 – $155</div>
+                        <div class="price-label">Charcuterie & Cutting Boards</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-range">$150 – $165</div>
+                        <div class="price-label">Carving Boards & Premium Pieces</div>
+                    </div>
+                </div>
+
+                <p class="t-body-sm reveal reveal-delay-4" style="color: var(--walnut-light); font-style: italic;">
+                    Prices vary by size, wood species, and complexity. Iron handle upgrades available on carving boards.
+                </p>
+
+                <a href="mailto:steves.woodcraft@email.com" class="cta-button reveal reveal-delay-5">
+                    Get in Touch
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">Steve's <span>Woodcraft</span></div>
+                    <p>Each board is handcrafted with care from hand-selected hardwoods. No two pieces are ever the same.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <a href="#story">Our Story</a>
+                    <a href="#collection">Collection</a>
+                    <a href="#the-wood">The Wood</a>
+                    <a href="#process">Process</a>
+                    <a href="#custom">Custom Orders</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Coming Soon</h4>
+                    <a href="#">Etsy Shop</a>
+                    <a href="#">Instagram</a>
+                    <a href="mailto:steves.woodcraft@email.com">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Steve's Woodcraft. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                    <a href="#" aria-label="Etsy">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 3.5V8H5v2h3v4H5v2h3v4.5c0 .83.67 1.5 1.5 1.5H13v-2H9.5V16H13v-2H9.5v-4H13V8H9.5V3.5C9.5 2.67 10.17 2 11 2H19v2h-7.5c-.28 0-.5.22-.5.5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         LIGHTBOX
+         ========================================== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script>
+        // ---- NAV SCROLL BEHAVIOR ----
+        const nav = document.getElementById('nav');
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 80);
+        }, { passive: true });
+
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ---- SCROLL REVEAL ----
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ---- LIGHTBOX ----
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.dataset.img;
+                if (imgSrc) {
+                    lightboxImg.src = imgSrc;
+                    lightboxImg.alt = card.querySelector('h3')?.textContent || '';
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // ---- SMOOTH SCROLL FOR CTA ----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
