@@ -542,8 +542,35 @@
             transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .story-img:hover img {
+        .story-img:hover img:not(.steve-hover-img) {
             transform: scale(1.05);
+        }
+
+        /* Steve's magical mirror hover effect */
+        .steve-hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            filter: brightness(0.8) contrast(1.1);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        filter 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 2;
+            transform: scale(1.02);
+        }
+
+        .story-img-portrait:hover .steve-hover-img {
+            opacity: 1;
+            filter: brightness(1) contrast(1);
+            transform: scale(1);
+        }
+
+        .story-img-portrait:hover img:not(.steve-hover-img) {
+            transform: scale(1);
         }
 
         .story-img-portrait {
@@ -1311,6 +1338,7 @@
                 <div class="story-images">
                     <div class="story-img story-img-portrait reveal">
                         <img src="images/IMG_4457.jpeg" alt="Steve — master woodworker and founder of Steve's Woodcraft" loading="lazy" width="600" height="800">
+                        <img src="images/steve-tophat.jpeg" alt="Steve in top hat and tuxedo — the distinguished woodworker" loading="lazy" width="600" height="900" class="steve-hover-img">
                     </div>
                     <div class="story-img story-img-landscape reveal reveal-delay-1">
                         <img src="images/IMG_3777.jpeg" alt="Steve holding a hand-selected burl wood charcuterie board" loading="lazy" width="600" height="400">
