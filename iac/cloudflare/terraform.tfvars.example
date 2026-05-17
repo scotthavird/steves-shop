@@ -1,0 +1,11 @@
+# Copy to terraform.tfvars and fill in the account ID.
+# The API token is read from the env: export TF_VAR_cloudflare_api_token=...
+# Account ID is in the right sidebar of https://dash.cloudflare.com/
+
+cloudflare_account_id = "REPLACE_ME"
+
+# Defaults below are correct for this repo — override only if you fork/rename.
+# domain_name  = "stevesboards.com"
+# namespace    = "steves-shop"
+# github_owner = "scotthavird"
+# github_repo  = "steves-shop"
