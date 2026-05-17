@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Originals — not deployed. Keep on local disk only.
+photos/
+
+# Terraform
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/terraform.tfstate.backup
+**/terraform.tfstate.d/
+**/*.tfvars
+!**/*.tfvars.example
+*.override.tf
+*.override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
