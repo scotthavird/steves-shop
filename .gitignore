@@ -13,6 +13,8 @@ photos/
 **/terraform.tfstate.d/
 **/*.tfvars
 !**/*.tfvars.example
+**/tfplan
+**/*.tfplan
 *.override.tf
 *.override.tf.json
 *_override.tf
