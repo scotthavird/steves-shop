@@ -1,4 +1,4 @@
-# Steve's Woodcraft
+# Steve's Boards
 
 Handcrafted cutting boards and charcuterie boards made from carefully sourced exotic hardwoods.
 
